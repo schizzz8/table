@@ -1,0 +1,104 @@
+%\documentclass{article}
+\documentclass[a4paper,landscape]{article}
+
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multirow}
+
+%% Key definitions for text elements. USE THEM
+\def\secref#1{Sec.~\ref{#1}}
+\def\figref#1{Fig.~\ref{#1}}
+\def\tabref#1{Tab.~\ref{#1}}
+\def\eqref#1{Eq.~(\ref{#1})}
+\def\algref#1{Alg.~\ref{#1}}
+\def\appref#1{App.~\ref{#1}}
+
+\newcommand\etal{\emph{et al.}}
+
+\usepackage{rotating}
+
+%\input{notation.tex}
+
+
+\usepackage{geometry}
+%\geometry{
+%	a4paper,
+%%	total={170mm,257mm},
+%	left=0mm,
+%	top=0mm,
+%	right=0mm,
+%	bottom=0mm,
+%}
+
+\title{\LARGE \bf Semantic Mapping}
+
+\begin{document}
+		
+	%\begin{sidewaystable}
+	\begin{table}
+		\centering
+		\resizebox{\textwidth}{!}{
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			{\bf Approach} & {\bf Perception} & {\bf Representation} & {\bf Exploration} \\
+			\hline
+			\multirow{2}{*}{\cite{zender2008ras}}& R1: 2D SLAM & Topological & \\ 
+			& R2: Place Classification + Object Recognition & & \\
+			\hline		 
+			\multirow{2}{*}{\cite{nuchter2008ras}}& R1: 3D SLAM &  & \\ 
+			& R2: Scene Labeling + 3D Object Detection & & \\
+			\hline 			 
+			\multirow{2}{*}{\cite{rusu2008ras}}& R1: 3D SLAM + Surface Reconstruction & Object-level & \\ 
+			& R2: 3D Object Recognition & & \\			
+			\hline 
+			\multirow{2}{*}{\cite{xiong2010bmvc}}& R1: 3D SLAM &  & \\ 
+			& R2: Scene Labeling  & & \\			
+			\hline 
+			\multirow{2}{*}{\cite{tenorth2010knowrob}}& R1: 3D SLAM & Object-level & \\ 			
+			& R2: 3D Object Recognition & + KB & \\			
+			\hline
+			\multirow{2}{*}{\cite{koppula2011nips}}& R1: 3D SLAM &  & \\ 
+			& R2: Scene Labeling  & & \\			
+			\hline 			 
+			\multirow{2}{*}{\cite{pronobis2012icra}}& R1: 2D SLAM & Topological & \\ 
+			& R2: Place Classification + Object Recognition & + KB & \\
+			\hline 			 
+			\multirow{2}{*}{\cite{stuckler2012iros}}& R1: 3D SLAM &  & \\ 
+			& R2: Semantic Segmentation  & & \\
+			\hline
+			\multirow{2}{*}{\cite{gunther2013iros}}& R1: 3D SLAM + Surface Reconstruction & Object-level & \\ 
+			& R2: 3D Object Recognition & & \\
+			\hline 			 
+			\multirow{2}{*}{\cite{valentin2013cvpr}}& R1: 3D SLAM + Surface Reconstruction & & \\ 
+			& R2: Scene Labeling & & \\
+			\hline 			 
+			\multirow{2}{*}{\cite{hermans2014dense}}& R1: 3D SLAM & & \\ 
+			& R2: Semantic Segmentation & & \\
+			\hline
+			\multirow{2}{*}{\cite{vineet2015icra}}& R1: 3D Volumetric SLAM & & \\ 
+			& R2: Semantic Segmentation & & \\
+			\hline
+			\multirow{2}{*}{\cite{sunderhauf2016icra}}& R1: 2D SLAM & & \\ 
+			& R2: Place Categorization & & \\
+			\hline
+			\multirow{2}{*}{\cite{ruiz2017building}}& R1: 2D SLAM & Object-level& \\ 
+			& R2: 3D Object Recognition & + KB & \\
+			\hline
+			\multirow{2}{*}{\cite{mccormac2017semanticfusion}}& R1: 3D SLAM & & \\ 
+			& R2: Semantic Segmentation & & \\
+			\hline 			 
+		\end{tabular}}
+		\caption{Survey.}
+		\label{tab:survey}
+	%\end{sidewaystable}	
+	\end{table}
+	
+	\clearpage
+
+	\bibliography{references}
+	\bibliographystyle{apalike}
+	
+\end{document}
